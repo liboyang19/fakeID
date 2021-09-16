@@ -1,23 +1,28 @@
 <!--index.wxml-->
 <view class="container">
+  <view class="colorBar"></view>
   <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+    <image class='pic' src='../../611631834701_.pic.jpg'></image>
+    <view class='name english'>Boyang Li</view>
+    <view class='name'>李博阳</view>
+    <view class='showQRCode'>展示电子码</view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="history">
+    <view class='line'>
+      <view class='left'>消费记录</view>
+      <view class='right'>查看全部</view>
+    </view>
+    <view class='line'>
+      <view class='left'>北总B1望...-0元</view>
+      <view class='right'>2021-09-09</view>
+    </view>
+    <view class='line'>
+      <view class='left'>北总B1望...-0元</view>
+      <view class='right'>2021-09-09</view>
+    </view>
+  </view>
+  <view class='bottomLine'>
+    <view class='bottomLeft'>电子工卡</view>
+    <view>个人中心</view>
   </view>
 </view>
